@@ -12,10 +12,12 @@
   --color-bg: #ffffff;
   --color-text: #27303a;
   --color-muted: #6b7684;
+  --color-border: #e0e0e0;
   --font-heading: Georgia, serif;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 32px;
+  --radius: 8px;
 }
 
 /* 3. Базові стилі сторінки та макета */
@@ -27,9 +29,9 @@ body {
 }
 
 main {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
 }
 
 section {
@@ -48,7 +50,7 @@ ul, ol {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: var(--radius);
   margin-bottom: var(--spacing-md);
 }
 
@@ -64,13 +66,21 @@ footer {
 header {
   background-color: var(--color-primary);
   color: white;
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-right: var(--spacing-md);
   font-weight: bold;
   transition: color 0.2s ease;
 }
@@ -121,7 +131,7 @@ label {
 input, select, textarea {
   display: block;
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   padding: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
   border: 1px solid var(--color-muted);
@@ -134,6 +144,17 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
   border-color: var(--color-accent);
   outline: none;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.form-row input {
+  margin-bottom: 0;
 }
 
 button {
@@ -154,15 +175,43 @@ button:hover {
 }
 
 /* 7. Картки проєктів */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
 #projects article {
+  flex: 1 1 250px;
   background-color: var(--color-bg);
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   padding: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
   transition: box-shadow 0.2s ease;
 }
 
 #projects article:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 8. Адаптивна перебудова для планшетів і десктопів (варіант 9: 768px) */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+
+  .form-row {
+    flex-direction: row;
+  }
+
+  .form-row > div {
+    flex: 1;
+  }
 }

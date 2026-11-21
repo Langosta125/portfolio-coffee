@@ -39,42 +39,65 @@
 
     <section id="projects">
       <h2>Проєкти</h2>
-      <article>
-        <h3>Лінійка «Осінні спешелті-напої»</h3>
-        <p>Серія з 5 авторських рецептів кавових напоїв із
-          пряним гарбузом, горіховим сиропом та вершковою пінкою.</p>
-      </article>
-      <article>
-        <h3>Онлайн-меню та передзамовлення</h3>
-        <p>Зручний каталог напоїв і випічки з підбором об’єму,
-          альтернативного молока та бронюванням столиків.</p>
-      </article>
-      <article>
-        <h3>Мінікурс «Кава вдома: турка та пуровер»</h3>
-        <p>Покроковий гід із помелу зерна, пропорцій води,
-          температури заварювання та базової сенсорики.</p>
-      </article>
+      <div class="projects-list">
+        <article>
+          <h3>Лінійка «Осінні спешелті-напої»</h3>
+          <p>Серія з 5 авторських рецептів кавових напоїв із
+            пряним гарбузом, горіховим сиропом та вершковою пінкою.</p>
+        </article>
+        <article>
+          <h3>Онлайн-меню та передзамовлення</h3>
+          <p>Зручний каталог напоїв і випічки з підбором об’єму,
+            альтернативного молока та бронюванням столиків.</p>
+        </article>
+        <article>
+          <h3>Мінікурс «Кава вдома: турка та пуровер»</h3>
+          <p>Покроковий гід із помелу зерна, пропорцій води,
+            температури заварювання та базової сенсорики.</p>
+        </article>
+        <article>
+          <h3>Ранкові сети «Кава + Круасан»</h3>
+          <p>Спеціальні сніданкові пропозиції з випічкою власного
+            виробництва та свіжозвареним еспресо або фільтром.</p>
+        </article>
+        <article>
+          <h3>Кавові дегустації по сусідству</h3>
+          <p>Щомісячні зустрічі гостей із каппінгом різних сортів
+            обсмажування та розбором профілю смаку.</p>
+        </article>
+        <article>
+          <h3>Програма лояльності та багаторазові горнятка</h3>
+          <p>Система бонусів для постійних гостей і знижка на напої
+            у власних термокухлях для підтримки екології.</p>
+        </article>
+      </div>
     </section>
 
     <section id="contact">
       <h2>Контакти</h2>
       <form action="#" method="post">
-        <label for="name">Ім’я *</label><br>
-        <input type="text" id="name" name="name"
-          required minlength="2" maxlength="50"><br><br>
-        <label for="email">Електронна пошта *</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="topic">Тема звернення *</label><br>
+        <div class="form-row">
+          <div>
+            <label for="name">Ім’я *</label>
+            <input type="text" id="name" name="name"
+              required minlength="2" maxlength="50">
+          </div>
+          <div>
+            <label for="email">Електронна пошта *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <label for="topic">Тема звернення *</label>
         <select id="topic" name="topic" required>
           <option value="" disabled selected>Оберіть тему</option>
           <option value="general">Загальне питання</option>
           <option value="work">Замовлення напоїв / Бронювання столика</option>
           <option value="coop">Пропозиція співпраці або постачання</option>
-        </select><br><br>
-        <label for="message">Повідомлення *</label><br>
+        </select>
+        <label for="message">Повідомлення *</label>
         <textarea id="message" name="message"
           required maxlength="500"
-          rows="5"></textarea><br><br>
+          rows="5"></textarea>
         <button type="submit">Надіслати</button>
       </form>
     </section>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дашборд — Облік кав'ярні: напої, виручка та трафік</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="layout_header">
+      <h1>Облік кав'ярні: напої, виручка та трафік</h1>
+    </header>
+
+    <aside class="layout_sidebar">
+      <nav aria-label="Розділи дашборду">
+        <ul>
+          <li><a href="#">Огляд</a></li>
+          <li><a href="#">Напої та меню</a></li>
+          <li><a href="#">Виручка</a></li>
+          <li><a href="index.html">← До портфоліо</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="layout_main">
+      <section class="cards" aria-label="Ключові показники">
+        <article class="card card--wide">
+          <h2>Динаміка трафіку гостей за тиждень (Пн–Нд)</h2>
+          <div class="chart" role="img" aria-label="Стовпчикова діаграма трафіку за сім днів">
+            <span style="--h: 50%" title="Понеділок: 50%"></span>
+            <span style="--h: 65%" title="Вівторок: 65%"></span>
+            <span style="--h: 60%" title="Середа: 60%"></span>
+            <span style="--h: 75%" title="Четвер: 75%"></span>
+            <span style="--h: 90%" title="П'ятниця: 90%"></span>
+            <span style="--h: 100%" title="Субота: 100%"></span>
+            <span style="--h: 85%" title="Неділя: 85%"></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Продано напоїв за день</h2>
+          <p class="card_value">284</p>
+        </article>
+
+        <article class="card">
+          <h2>Денна виручка</h2>
+          <p class="card_value">24 650 ₴</p>
+        </article>
+
+        <article class="card card--tall">
+          <h2>Середній чек та утримання</h2>
+          <p class="card_value">195 ₴</p>
+          <p class="card_note">68% гостей повертаються протягом тижня та замовляють спешелті-каву з випічкою</p>
+        </article>
+
+        <article class="card">
+          <h2>Трафік гостей</h2>
+          <p class="card_value">126</p>
+        </article>
+
+        <article class="card">
+          <h2>Хіт меню: Флет Вайт</h2>
+          <p class="card_value">78 шт</p>
+        </article>
+
+        <article class="card">
+          <h2>Альтернативне молоко</h2>
+          <p class="card_value">42%</p>
+        </article>
+
+        <article class="card">
+          <h2>Середній час очікування</h2>
+          <p class="card_value">3,5 хв</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="layout_footer">
+      <p>© 2026 Павло Скрипка • Група СОІ-24-1 • Лабораторна робота № 5</p>
+    </footer>
+  </div>
+</body>
+</html>

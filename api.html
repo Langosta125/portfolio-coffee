@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REST API через Fetch — Календар свят для акцій кав'ярні (ЛР8)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="api.css" />
+  <script src="api.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Кав’ярня по сусідству — Лабораторна робота № 8</h1>
+    <nav>
+      <a href="index.html">Головна (Портфоліо)</a>
+      <a href="dashboard.html">Дашборд</a>
+      <a href="lab6.html">Конвертер і каталог</a>
+      <a href="todo.html">Список задач</a>
+      <a href="api.html">Робота з АРІ</a>
+    </nav>
+  </header>
+
+  <main class="app">
+    <section id="api-section">
+      <h2 id="app-title">Календар державних свят різних країн для акцій кав'ярні (Nager.Date API)</h2>
+
+      <form id="search-form" novalidate>
+        <label for="query-input" id="query-label">Код країни (ISO 3166-1 alpha-2, наприклад UA, PL, DE, US)</label>
+        <input
+          id="query-input"
+          type="search"
+          maxlength="10"
+          autocomplete="off"
+          placeholder="Наприклад, UA або PL"
+        />
+        <select id="year-select" aria-label="Рік свят">
+          <option value="2026" selected>2026</option>
+          <option value="2025">2025</option>
+          <option value="2027">2027</option>
+        </select>
+        <button type="submit" id="submit-btn">Знайти</button>
+      </form>
+
+      <p id="form-error" class="error" role="alert"></p>
+
+      <!-- Контейнер для додаткової функції Г (Обране в localStorage) -->
+      <div id="favorites-box" class="favorites-box" hidden>
+        <h3>Обране для акцій кав'ярні</h3>
+        <ul id="favorites-list" class="places"></ul>
+      </div>
+
+      <!-- Область відображення станів loading / empty / error -->
+      <div id="status" role="status" aria-live="polite"></div>
+
+      <!-- Проміжний список вибору -->
+      <ul id="places" class="places"></ul>
+
+      <!-- Основний контейнер результатів з АРІ -->
+      <section id="result" aria-live="polite"></section>
+
+      <div class="pagination-box">
+        <button type="button" id="load-more-btn" hidden>Показати ще</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Павло Скрипка • Група СОІ-24-1 • Лабораторна робота № 8 (Fetch API).</p>
+  </footer>
+</body>
+</html>
